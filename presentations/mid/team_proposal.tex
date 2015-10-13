@@ -1,0 +1,132 @@
+\documentclass[compress,10pt]{beamer}
+%
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{esint}
+\usepackage{xcolor}
+\usepackage{empheq}
+\usepackage{animate}
+\usepackage{dcolumn}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{pgfgantt}
+\usepackage{tikz}
+\usepackage{adjustbox}
+\usetikzlibrary{shapes,arrows}
+
+% Optional for code samples
+%misc.
+%Note: tarticle has ``several'' changes from article
+%in this vein.
+% some simplifying commands
+
+%macros
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+%partial and total derivative macros
+\newcommand{\pd}[2][]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\td}[2][]{\frac{\mathrm{d} {#1}}{\mathrm{d} {#2}}}
+
+%differential d macro
+\renewcommand{\d}{\mathrm{d}}
+\renewcommand{\(}{\ensuremath{\left(}}
+\renewcommand{\)}{\ensuremath{\right)}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\ie}{{\it i.e.}}
+
+%cite pictures
+\usepackage[absolute,overlay]{textpos}
+\setbeamercolor{framesource}{fg=gray}
+\setbeamerfont{framesource}{size=\tiny}
+\newcommand{\source}[1]{\begin{textblock*}{4cm}(0.3cm,8.6cm)
+    \begin{beamercolorbox}[ht=0.5cm,left]{framesource}
+        \usebeamerfont{framesource}\usebeamercolor[fg]{framesource} Source: {#1}
+    \end{beamercolorbox}
+\end{textblock*}}
+
+%Get rid of navigation icons
+\setbeamertemplate{navigation symbols}{}
+\useoutertheme{infolines}
+
+%Aggie-themed
+\pgfdeclareimage[height=0.1in]{TAMUlogo}{tamu_engineering.png}
+\logo{\raisebox{-8pt}{\pgfuseimage{TAMUlogo}}}
+\titlegraphic{\includegraphics[height=0.18\textheight]{tamu_seal.png}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optional packages, used to show off certain tricks
+
+\setlength{\leftmargin}{-2cm}
+\setlength{\rightmargin}{-2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mode<presentation>
+{
+\usetheme{Frankfurt}
+
+%Make it Aggie Maroon
+\usecolortheme[RGB={80,0,0}]{structure}  
+
+  % This will typeset only the frames (or slides) that have the given label ("current" in this case).
+%  \includeonlyframes{current}
+}
+
+\title[Proposal]{Proposal Title}
+
+\author[EM$^{2}$ Reactor Team]{\large Anas Alwafi, Landon Brockmeyer, Mason Childs, Daniel Holladay, Jacob Landman}
+
+%TAMU
+\institute[TAMU]{Department of Nuclear Engineering\\
+Texas A\&M University \\
+College Station, TX 77843-3133\\[1ex]}
+%\href{mailto:dholladay00@tamu.edu}{dholladay00@tamu.edu}}
+
+\date{\today}
+
+% You can override the default acknowledgment, and address if you want
+%\acknowledgement{*Submitted in partial fulfillment of the requirements of NUEN 610 \\
+%(Nuclear Reactor Design)}
+%\address{Nuclear Engineering Department \\
+%            Texas A\&M University \\
+%            College Station, TX 77843-3133}}
+
+% If you don't want the menu section outline above the title, do this:
+%\setbeamertemplate{headline}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------
+\begin{frame}[label=title,plain]
+\titlepage
+\end{frame}
+%------
+\begin{frame}
+\frametitle{Presentation Outline}
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%
+% The order of these files can easily switched
+%%%%%%%%%%%%%%%%%%%%%%%
+%------------------------
+\input{Anas.tex}
+%------------------------
+\input{Landon.tex}
+%------------------------
+\input{Mason.tex}
+%------------------------
+\input{Daniel.tex}
+%------------------------
+\input{Jacob.tex}
+%------------------------
+\end{document}
+
+
+

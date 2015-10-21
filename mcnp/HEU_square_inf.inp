@@ -1,46 +1,48 @@
 c -- Cell Cards --
-c
-c - HEU Fuel Element - 
-  201     1   4.794E-02       -101   u=11 imp:n=1
-  202     6   9.642E-02   101 -102   u=11 imp:n=1
-  203     5  -8.51E-03        102    u=11 imp:n=1
-  210     0   -103 104 -105 106    fill=11  imp:n=1
-c
+c                                                                               
+c - HEU Fuel Element -                                                          
+  201     1 0.04794 -101       u=11           imp:n=1
+  202     6 0.09642  101 -102  u=11           imp:n=1
+  203     5 -0.00851      102  u=11           imp:n=1
+  210     0         -103 104 -105 106 -107 108      fill=11 imp:n=1
+  211     0          103 :-104 :105 :-106 :107 :-108        imp:n=0
+c                                                                               
 
-c -- Surface Cards --
-c
-  101       c/z   0.0    0.0            0.470
-  102       c/z   0.0    0.0            0.537
- 103*        px   0.5888888888888889 
- 104*        px  -0.5888888888888889
- 105*        py   0.5888888888888889
- 106*        py  -0.5888888888888889
-c
+c -- Surface Cards --                                                           
+c                                                                               
+  101       c/z 0 0 0.47 
+  102       c/z 0 0 0.537 
+ *103        px 0.58888888888889 
+ *104        px -0.58888888888889 
+ *105        py 0.58888888888889 
+ *106        py -0.58888888888889 
+  107        pz 10 
+  108        pz -10 
+c                                                                               
 
-c -- Data Cards --
-c
-c - Materials -             XS Libraries are set to .83c for 900 K (~630 C)
-c
-c - Uranium, Enriched, Typical Commercial (342)
-m1   92234.83c   0.000310        
-     92235.83c   0.129967  
-     92238.83c   0.869723  
-c
-c - Uranium, Depleted, Typical (341)
-m2   92234.83c   0.000005        
-     92235.83c   0.002532         
-     92238.83c   0.997463 
-c
-c - Beryllium Carbide (25) - XS lib may not exist
-m3    4009.83c   0.666667
-      6000.83c   0.333333 
-c 
-c - Carbon, Graphite (Reactor Grade) (63)
-m4    6000.83c   1.000000
-c
-c - Helium, Natural (151)
-m5    2004.83c   1.000000
-c
-c - Silicon Carbide (Hexagonal) (282)
-m6    6000.83c   0.500000 
-     14000   0.500000
+c -- Data Cards --                                                              
+c                                                                               
+c - Materials -             XS Libraries are set to .83c for 900 K (~630 C)     
+c                                                                               
+c - Uranium, Enriched, Typical Commercial (342)                                 
+m1    92234.83c       0.00031  $MAT1
+      92235.83c      0.129967 92238.83c      0.869723 
+c                                                                               
+c - Uranium, Depleted, Typical (341)                                            
+m2    92234.83c        5e-006  $MAT2
+      92235.83c      0.002532 92238.83c      0.997463 
+c                                                                               
+c - Beryllium Carbide (25) - XS lib may not exist                               
+m3    4009.83c       0.666667  $MAT3
+      6000.83c       0.333333 
+c                                                                               
+c - Carbon, Graphite (Reactor Grade) (63)                                       
+m4    6000.83c              1  $MAT4
+c                                                                               
+c - Helium, Natural (151)                                                       
+m5    2004.83c              1  $MAT5
+c                                                                               
+c - Silicon Carbide (Hexagonal) (282)                                           
+m6    6000.83c            0.5  $MAT6
+      14000.              0.5 
+imp:n   1 4r          $ 201, 211

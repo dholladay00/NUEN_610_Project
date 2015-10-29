@@ -9,6 +9,15 @@ c  101     2   4.794E-02   102 -101 108 -107    u=10 imp:n=1
   110     0              -105 106  lat=1   u=1
       fill=10        imp:n=1
 c
+c - LEU Fuel Element - metal fuel, and uranium carbide fuel
+c  601     2   4.794E-02   202 -201 208 -207    u=16 imp:n=1       
+  601     2   6.567E-02   202 -201 208 -207      u=16 imp:n=1            
+  602     6   9.642E-02   (-202 204):(207 -203 204):(201 -203):
+          (-208 -203 204) u=16 imp:n=1     
+  603     5  -8.51E-03     203 :-204                 u=16 imp:n=1                                                                                  
+  610     0              -205 206  lat=1   u=6
+      fill=16        imp:n=1
+c
 c - Enriched Fuel Element - metal fuel, and uranium carbide fuel
 c  201     1   4.794E-02   102 -101 108 -107    u=11 imp:n=1       
   201     1   6.567E-02    102 -101 108 -107   u=11 imp:n=1
@@ -17,6 +26,15 @@ c  201     1   4.794E-02   102 -101 108 -107    u=11 imp:n=1
   203     5  -8.51E-03       103 :-104    u=11 imp:n=1
   210     0               -105 106  lat=1   u=2
       fill=11        imp:n=1
+c
+c - Enriched Fuel Element - metal fuel, and uranium carbide fuel
+c  701     1   4.794E-02   202 -201 208 -207    u=17 imp:n=1       
+  701     1   6.567E-02    202 -201 208 -207   u=17 imp:n=1
+  702     6   9.642E-02   (-202 204):(207 -203 204):(201 -203):
+          (-208 -203 204)   u=17 imp:n=1
+  703     5  -8.51E-03       203 :-204    u=17 imp:n=1
+  710     0               -205 206  lat=1   u=7
+      fill=17        imp:n=1
 c
 c - Reflector Element - 
   301     3   1.143E-01       -301   u=3 imp:n=1
@@ -31,83 +49,83 @@ c - Bottom Lattice Layer
        3  3  3  3  3
        3  3  3  3  3
 c - Second Lattice Layer
-       3  1  1  1  3
-       1  1  1  1  1
-       1  1  1  1  1
-       1  1  1  1  1
-       3  1  1  1  3
+       3  1  6  1  3
+       1  6  1  6  1
+       6  1  6  1  6
+       1  6  1  6  1
+       3  1  6  1  3
 c - Third Lattice Layer
-       3  1  1  1  3
-       1  1  1  1  1
-       1  1  1  1  1
-       1  1  1  1  1
-       3  1  1  1  3
+       3  6  1  6  3
+       6  1  6  1  6
+       1  6  1  6  1
+       6  1  6  1  6
+       3  6  1  6  3
 c - Fourth Lattice Layer
-       3  1  1  1  3
-       1  1  1  1  1
-       1  1  1  1  1
-       1  1  1  1  1
-       3  1  1  1  3
+       3  1  6  1  3
+       1  6  1  6  1
+       6  1  6  1  6
+       1  6  1  6  1
+       3  1  6  1  3
 c - Fifth Lattice Layer
-       3  1  1  1  3
-       1  1  1  1  1
-       1  1  1  1  1
-       1  1  1  1  1
-       3  1  1  1  3
+       3  6  1  6  3
+       6  1  6  1  6
+       1  6  1  6  1
+       6  1  6  1  6
+       3  6  1  6  3
 c - Sixth Lattice Layer
-       3  1  1  1  3
-       1  2  2  2  1
-       1  2  2  2  1
-       1  2  2  2  1
-       3  1  1  1  3
+       3  1  6  1  3
+       1  7  2  7  1
+       6  2  7  2  6
+       1  7  2  7  1
+       3  1  6  1  3
 c - Seventh Lattice Layer
-       3  1  1  1  3
-       1  2  2  2  1
-       1  2  1  2  1
-       1  2  2  2  1
-       3  1  1  1  3
+       3  6  1  6  3
+       6  2  7  2  6
+       1  7  1  7  1
+       6  2  7  2  6
+       3  6  1  6  3
 c - Eighth Lattice Layer
-       3  1  1  1  3
-       1  2  2  2  1
-       1  2  1  2  1
-       1  2  2  2  1
-       3  1  1  1  3
+       3  1  6  1  3
+       1  7  2  7  1
+       6  2  6  2  6
+       1  7  2  7  1
+       3  1  6  1  3
 c - Ninth Lattice Layer
-       3  1  1  1  3
-       1  2  2  2  1
-       1  2  1  2  1
-       1  2  2  2  1
-       3  1  1  1  3
+       3  6  1  6  3
+       6  2  7  2  6
+       1  7  1  7  1
+       6  2  7  2  6
+       3  6  1  6  3
 c - Tenth Lattice Layer
-       3  1  1  1  3
-       1  2  2  2  1
-       1  2  2  2  1
-       1  2  2  2  1
-       3  1  1  1  3
+       3  1  6  1  3
+       1  7  2  7  1
+       6  2  7  2  6
+       1  7  2  7  1
+       3  1  6  1  3
 c - Eleventh Lattice Layer
-       3  1  1  1  3
-       1  1  1  1  1
-       1  1  1  1  1
-       1  1  1  1  1
-       3  1  1  1  3
+       3  6  1  6  3
+       6  1  6  1  6
+       1  6  1  6  1
+       6  1  6  1  6
+       3  6  1  6  3
 c - Twelfth Lattice Layer
-       3  1  1  1  3
-       1  1  1  1  1
-       1  1  1  1  1
-       1  1  1  1  1
-       3  1  1  1  3
+       3  1  6  1  3
+       1  6  1  6  1
+       6  1  6  1  6
+       1  6  1  6  1
+       3  1  6  1  3
 c - Thirteenth Lattice Layer
-       3  1  1  1  3
-       1  1  1  1  1
-       1  1  1  1  1
-       1  1  1  1  1
-       3  1  1  1  3
+       3  6  1  6  3
+       6  1  6  1  6
+       1  6  1  6  1
+       6  1  6  1  6
+       3  6  1  6  3
 c - Fourteenth Lattice Layer
-       3  1  1  1  3
-       1  1  1  1  1
-       1  1  1  1  1
-       1  1  1  1  1
-       3  1  1  1  3
+       3  1  6  1  3
+       1  6  1  6  1
+       6  1  6  1  6
+       1  6  1  6  1
+       3  1  6  1  3
 c - Top Lattice Layer
        3  3  3  3  3
        3  3  3  3  3
@@ -151,12 +169,17 @@ c - Pins are similar size to PWR for convenience and reference
   107        py 20.943 
   108        py -20.943 
 c
-c - LEU Fuel Element -
+  200       rpp -21.2   21.2   -21.2  21.2   -10  10
+  201        py 0.47 
+  202        py -0.47 
+  203        py 0.537 
+  204        py -0.537 
+  205        py 0.73 
+  206        py -0.73 
+  207        px 20.943 
+  208        px -20.943 
 c
-c - HEU Fuel Element - 
-  201       rpp -21.3   21.3   -21.3  21.3   -151 151
-c
-c - Reflector Element -
+c - Lattice Element -
   301       rpp -21.3   21.3   -21.3  21.3   -151 151
 c
 c - Fuel Region Surfaces

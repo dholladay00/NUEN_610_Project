@@ -182,7 +182,7 @@ c -- Data Cards --
 c - Particle transport type -
 mode n
 c - k_eff simulation declaration - 
-kcode 1000  1.0 100 100    $ src particles, k_eff estimate, cycles to drop, total cycles
+kcode 1000  1.0 50 500    $ src particles, k_eff estimate, cycles to drop, total cycles
 ksrc 1.0  0.0  0.0         $ position of source
 c
 c each fuel element has a volume equal to 787.4568
@@ -204,7 +204,12 @@ burn  TIME= 365.0 365.0 365.0 365.0 365.0 365.0 365.0
             1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
       POWER=600 MAT=1 2 MATVOL=959122.3824 5.2751E6 
       BOPT=1.0 14 -1
-      OMIT=2 21 6014  7016  8018  9018
+      OMIT=1 21 6014  7016  8018  9018
+                45106 45107 45108 45109 46109
+                60149 67163 67164 67166 68165
+                68169 69166 69167 70168 70169
+                70170 70171
+           2 21 6014  7016  8018  9018
                 45106 45107 45108 45109 46109
                 60149 67163 67164 67166 68165
                 68169 69166 69167 70168 70169

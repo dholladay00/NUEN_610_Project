@@ -54,14 +54,14 @@ c - Fourth Lattice Layer
        3  1  1  1  3
 c - Fifth Lattice Layer
        3  1  1  1  3
-       1  1  1  1  1
-       1  1  1  1  1
-       1  1  1  1  1
+       1  2  2  2  1
+       1  2  2  2  1
+       1  2  2  2  1
        3  1  1  1  3
 c - Sixth Lattice Layer
        3  1  1  1  3
        1  2  2  2  1
-       1  2  2  2  1
+       1  2  1  2  1
        1  2  2  2  1
        3  1  1  1  3
 c - Seventh Lattice Layer
@@ -85,14 +85,14 @@ c - Ninth Lattice Layer
 c - Tenth Lattice Layer
        3  1  1  1  3
        1  2  2  2  1
-       1  2  2  2  1
+       1  2  1  2  1
        1  2  2  2  1
        3  1  1  1  3
 c - Eleventh Lattice Layer
        3  1  1  1  3
-       1  1  1  1  1
-       1  1  1  1  1
-       1  1  1  1  1
+       1  2  2  2  1
+       1  2  2  2  1
+       1  2  2  2  1
        3  1  1  1  3
 c - Twelfth Lattice Layer
        3  1  1  1  3
@@ -188,7 +188,7 @@ c - Particle transport type -
 mode n
 c - k_eff simulation declaration - 
 kcode 5.0E03  1.0 100 1.0E04    $ src particles, k_eff estimate, cycles to drop, total cycles
-ksrc 1.0  0.0  1.0         $ position of source
+c ksrc 1.0  0.0  1.0         $ position of source
 c - Materials -             XS Libraries are set to .83c for 900 K (~630 C)
 c
 c - Uranium, Enriched, 13% Enriched

@@ -1,0 +1,67 @@
+c -- Cell Cards --
+c
+c - LEU Fuel Element - 
+  201     1   4.794E-02       -101             u=11 imp:n=1 vol=13.87955
+  202     6   9.642E-02   101 -102             u=11 imp:n=1
+  203     5  -8.51E-03        102              u=11 imp:n=1
+  210     0         -103 104 -105 106 -107 108      fill=11 imp:n=1
+  211     0          103 :-104 :105 :-106 :107 :-108        imp:n=0
+c
+
+c -- Surface Cards --
+c
+  101       c/z   0.0    0.0            0.470
+  102       c/z   0.0    0.0            0.537
+ 103*        px   0.5888888888888889 
+ 104*        px  -0.5888888888888889
+ 105*        py   0.5888888888888889
+ 106*        py  -0.5888888888888889
+ 107         pz   10.0
+ 108         pz  -10.0
+c
+
+c -- Data Cards --
+c
+mode n
+c - k_eff simulation declaration -
+kcode 1000 1.27 10 100    $ src particles, k_eff estimate, cycles to drop, total cycles
+ksrc 0  0  0               $ position of source
+burn  TIME= 365.0 365.0 365.0 365.0 365.0 365.0 365.0
+            365.0 365.0 365.0 365.0 365.0 365.0 365.0
+            365.0 365.0 365.0 365.0 365.0 365.0 365.0
+            365.0 365.0 365.0 365.0 365.0 365.0 365.0	
+            365.0 365.0 			
+      PFRAC=1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	        1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	        1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+      POWER=0.0014697 MAT=1 BOPT=1.0 14 -1
+      OMIT=1 21  6014  7016  8018  9018
+                45106 45107 45108 45109 46109
+                60149 67163 67164 67166 68165
+                68169 69166 69167 70168 70169
+                70170 70171
+c - Materials -             XS Libraries are set to .83c for 900 K (~630 C)
+c
+c - Uranium, Enriched, Typical Commercial (342)
+m1   92234.83c   0.000310        
+     92235.83c   0.129967  
+     92238.83c   0.869723  
+c
+c - Uranium, Depleted, Typical (341)
+m2   92234.83c   0.000005        
+     92235.83c   0.002532         
+     92238.83c   0.997463 
+c
+c - Beryllium Carbide (25) - XS lib may not exist
+m3    4009.83c   0.666667
+      6000.83c   0.333333 
+c 
+c - Carbon, Graphite (Reactor Grade) (63)
+m4    6000.83c   1.000000
+c
+c - Helium, Natural (151)
+m5    2004.83c   1.000000
+c
+c - Silicon Carbide (Hexagonal) (282)
+m6    6000.83c   0.500000 
+     14000   0.500000

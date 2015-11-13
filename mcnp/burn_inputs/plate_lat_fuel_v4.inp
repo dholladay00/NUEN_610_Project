@@ -1,5 +1,5 @@
 c -- Cell Cards --
-c
+c v4 has the same enrichment as v3 (20%) but has less LEU axially
 c - LEU Fuel Element - metal fuel, and uranium carbide fuel  
   101     2   6.567E-02   102 -101 108 -107      u=10 imp:n=1 vol=787.4568        
   102     6   9.642E-02   (-102 104):(107 -103 104):(101 -103): 
@@ -54,14 +54,14 @@ c - Fifth Lattice Layer
        3  1  1  1  3
 c - Sixth Lattice Layer
        3  1  1  1  3
-       1  2  2  2  1
-       1  2  2  2  1
-       1  2  2  2  1
+       1  1  2  1  1
+       1  2  1  2  1
+       1  1  2  1  1
        3  1  1  1  3
 c - Seventh Lattice Layer
        3  1  1  1  3
        1  2  2  2  1
-       1  2  1  2  1
+       1  2  2  2  1
        1  2  2  2  1
        3  1  1  1  3
 c - Eighth Lattice Layer
@@ -73,14 +73,14 @@ c - Eighth Lattice Layer
 c - Ninth Lattice Layer
        3  1  1  1  3
        1  2  2  2  1
-       1  2  1  2  1
+       1  2  2  2  1
        1  2  2  2  1
        3  1  1  1  3
 c - Tenth Lattice Layer
        3  1  1  1  3
-       1  2  2  2  1
-       1  2  2  2  1
-       1  2  2  2  1
+       1  1  2  1  1
+       1  2  1  2  1
+       1  1  2  1  1
        3  1  1  1  3
 c - Eleventh Lattice Layer
        3  1  1  1  3
@@ -162,8 +162,8 @@ c
 c each fuel element has a volume equal to 787.4568
 c we have 29 fuel elements in each assembly
 c therefore the volume of fuel in each assembly is 22836.2472
-c we have 42 assemblies consisting of LEU
-c we have 231 assemblies consisting of Depleted U 
+c we have 34 assemblies consisting of LEU
+c we have 239 assemblies consisting of Depleted U 
 c the volume of LEU is 959122.3824
 c the volume of depleted U is 5.2751E6
 burn  TIME= 365.0 365.0 365.0 365.0 365.0 365.0 365.0
@@ -179,7 +179,7 @@ burn  TIME= 365.0 365.0 365.0 365.0 365.0 365.0 365.0
             1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
             1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
             1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-      POWER=600 MAT=1 2 MATVOL=959122.3824 5.2751E6 
+      POWER=600 MAT=1 2 MATVOL=776432.4048 5457863.081 
       BOPT=1.0 14 -1
       OMIT=1 21 6014  7016  8018  9018
                 45106 45107 45108 45109 46109
@@ -193,11 +193,11 @@ burn  TIME= 365.0 365.0 365.0 365.0 365.0 365.0 365.0
                 70170 70171
 c - Materials -             XS Libraries are set to .83c for 900 K (~630 C)
 c
-c - Uranium Carbide (332), 13% Enriched
+c - Uranium Carbide (332), 20% Enriched
 m1    6000.83c   0.500000
      92234.83c   0.000155
-     92235.83c   0.0649835
-     92238.83c   0.4348615
+     92235.83c   0.10
+     92238.83c   0.399845
 c
 c - Uranium Carbide (332), Depleted
 m2    6000.83c   0.500000

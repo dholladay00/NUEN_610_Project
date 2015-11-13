@@ -1,5 +1,5 @@
 c -- Cell Cards --
-c
+c v3 has the same lattice as v1 but has 20% enriched LEU
 c - LEU Fuel Element - metal fuel, and uranium carbide fuel  
   101     2   6.567E-02   102 -101 108 -107      u=10 imp:n=1 vol=787.4568        
   102     6   9.642E-02   (-102 104):(107 -103 104):(101 -103): 
@@ -193,11 +193,11 @@ burn  TIME= 365.0 365.0 365.0 365.0 365.0 365.0 365.0
                 70170 70171
 c - Materials -             XS Libraries are set to .83c for 900 K (~630 C)
 c
-c - Uranium Carbide (332), 13% Enriched
+c - Uranium Carbide (332), 20% Enriched
 m1    6000.83c   0.500000
      92234.83c   0.000155
-     92235.83c   0.0649835
-     92238.83c   0.4348615
+     92235.83c   0.10
+     92238.83c   0.399845
 c
 c - Uranium Carbide (332), Depleted
 m2    6000.83c   0.500000

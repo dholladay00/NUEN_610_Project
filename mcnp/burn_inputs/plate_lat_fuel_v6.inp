@@ -1,0 +1,222 @@
+c -- Cell Cards --
+c v2 has the same enrichment as v1 but has more LEU axially
+c - LEU Fuel Element - metal fuel, and uranium carbide fuel  
+  101     2   6.567E-02   102 -101 108 -107      u=10 imp:n=1 vol=787.4568        
+  102     6   9.642E-02   (-102 104):(107 -103 104):(101 -103): 
+          (-108 -103 104) u=10 imp:n=1     
+  103     5  -8.51E-03     103 :-104                 u=10 imp:n=1                                                                                  
+  110     0              -105 106  lat=1   u=1
+      fill=10        imp:n=1
+c
+c - Enriched Fuel Element - metal fuel, and uranium carbide fuel      
+  201     1   6.567E-02    102 -101 108 -107   u=11 imp:n=1 vol=787.4568 
+  202     6   9.642E-02   (-102 104):(107 -103 104):(101 -103):
+          (-108 -103 104)   u=11 imp:n=1
+  203     5  -8.51E-03       103 :-104    u=11 imp:n=1
+  210     0               -105 106  lat=1   u=2
+      fill=11        imp:n=1
+c
+c - Reflector Element - 
+  301     3   1.143E-01       -301   u=3 imp:n=1
+c
+c - Fuel Region
+  401     0   -100   lat=1  u=4  
+          fill=-2:2 -2:2 -7:7  
+c - Bottom Lattice Layer
+       3  3  3  3  3
+       3  3  3  3  3
+       3  3  3  3  3
+       3  3  3  3  3
+       3  3  3  3  3
+c - Second Lattice Layer
+       3  1  1  1  3
+       1  1  1  1  1
+       1  1  1  1  1
+       1  1  1  1  1
+       3  1  1  1  3
+c - Third Lattice Layer
+       3  1  1  1  3
+       1  1  1  1  1
+       1  1  1  1  1
+       1  1  1  1  1
+       3  1  1  1  3
+c - Fourth Lattice Layer
+       3  1  1  1  3
+       1  1  1  1  1
+       1  1  1  1  1
+       1  1  1  1  1
+       3  1  1  1  3
+c - Fifth Lattice Layer
+       3  1  1  1  3
+       1  2  2  2  1
+       1  2  2  2  1
+       1  2  2  2  1
+       3  1  1  1  3
+c - Sixth Lattice Layer
+       3  1  1  1  3
+       1  2  2  2  1
+       1  2  1  2  1
+       1  2  2  2  1
+       3  1  1  1  3
+c - Seventh Lattice Layer
+       3  1  1  1  3
+       1  2  2  2  1
+       1  2  1  2  1
+       1  2  2  2  1
+       3  1  1  1  3
+c - Eighth Lattice Layer
+       3  1  1  1  3
+       1  2  2  2  1
+       1  2  1  2  1
+       1  2  2  2  1
+       3  1  1  1  3
+c - Ninth Lattice Layer
+       3  1  1  1  3
+       1  2  2  2  1
+       1  2  1  2  1
+       1  2  2  2  1
+       3  1  1  1  3
+c - Tenth Lattice Layer
+       3  1  1  1  3
+       1  2  2  2  1
+       1  2  1  2  1
+       1  2  2  2  1
+       3  1  1  1  3
+c - Eleventh Lattice Layer
+       3  1  1  1  3
+       1  2  2  2  1
+       1  2  2  2  1
+       1  2  2  2  1
+       3  1  1  1  3
+c - Twelfth Lattice Layer
+       3  1  1  1  3
+       1  1  1  1  1
+       1  1  1  1  1
+       1  1  1  1  1
+       3  1  1  1  3
+c - Thirteenth Lattice Layer
+       3  1  1  1  3
+       1  1  1  1  1
+       1  1  1  1  1
+       1  1  1  1  1
+       3  1  1  1  3
+c - Fourteenth Lattice Layer
+       3  1  1  1  3
+       1  1  1  1  1
+       1  1  1  1  1
+       1  1  1  1  1
+       3  1  1  1  3
+c - Top Lattice Layer
+       3  3  3  3  3
+       3  3  3  3  3
+       3  3  3  3  3
+       3  3  3  3  3
+       3  3  3  3  3       imp:n=1
+  402     0    -401
+       fill=4 imp:n=1
+c
+c - Reflector / Shield Region
+  501     3    1.143E-01      401 -501    imp:n=1
+  502     4    8.524E-02      501 -502    imp:n=1
+c - Outside Simulation
+  999     0                   502        imp:n=0
+c
+
+c -- Surface Cards --
+c
+c - Lattice Elements - 
+c - Pins are similar size to PWR for convenience and reference
+  100       rpp -21.2   21.2   -21.2  21.2   -10  10
+  101        px 0.5 
+  102        px -0.5 
+  103        px 0.61 
+  104        px -0.61 
+  105        px 0.7851851851851852 
+  106        px -0.7851851851851852
+  107        py 20.943 
+  108        py -20.943 
+c
+c - LEU Fuel Element -
+c
+c - HEU Fuel Element - 
+  201       rpp -21.3   21.3   -21.3  21.3   -151 151
+c
+c - Reflector Element -
+  301       rpp -21.3   21.3   -21.3  21.3   -151 151
+c
+c - Fuel Region Surfaces
+  401       rpp -106 106  -106 106  -150 150      
+c
+c - Reflector Material Surfaces
+  501       rcc 0 0 -150 0 0 300 150
+  502       rcc 0 0 -250 0 0 500 230  
+c
+
+c -- Data Cards --
+c - Particle transport type -
+mode n
+c - k_eff simulation declaration - 
+kcode 1000  1.0 50 500    $ src particles, k_eff estimate, cycles to drop, total cycles
+ksrc 1.0  0.0  0.0         $ position of source
+c
+c each fuel element has a volume equal to 837.72
+c we have 27 fuel elements in each assembly
+c therefore the volume of fuel in each assembly is 22618.44
+c we have 58 assemblies consisting of LEU
+c we have 215 assemblies consisting of Depleted U 
+c the volume of LEU is 1311869.52
+c the volume of depleted U is 4862964.6
+burn  TIME= 365.0 365.0 365.0 365.0 365.0 365.0 365.0
+            365.0 365.0 365.0 365.0 365.0 365.0 365.0
+            365.0 365.0 365.0 365.0 365.0 365.0 365.0
+            365.0 365.0 365.0 365.0 365.0 365.0 365.0
+            365.0 365.0 365.0 365.0 365.0 365.0 365.0
+            365.0 365.0 365.0 365.0 365.0 365.0 365.0
+            365.0 365.0 365.0 365.0 365.0 365.0 365.0
+            365.0
+      PFRAC=1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+            1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+            1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+            1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+            1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+      POWER=600 MAT=1 2 MATVOL=1311869.52 4862964.6 
+      BOPT=1.0 14 -1
+      OMIT=1 21 6014  7016  8018  9018
+                45106 45107 45108 45109 46109
+                60149 67163 67164 67166 68165
+                68169 69166 69167 70168 70169
+                70170 70171
+           2 21 6014  7016  8018  9018
+                45106 45107 45108 45109 46109
+                60149 67163 67164 67166 68165
+                68169 69166 69167 70168 70169
+                70170 70171
+c - Materials -             XS Libraries are set to .83c for 900 K (~630 C)
+c
+c - Uranium Carbide (332), 13% Enriched
+m1    6000.83c   0.500000
+     92234.83c   0.000155
+     92235.83c   0.0649835
+     92238.83c   0.4348615
+c
+c - Uranium Carbide (332), Depleted
+m2    6000.83c   0.500000
+     92234.83c   0.0000025
+     92235.83c   0.001266
+     92238.83c   0.4987315
+c
+c - Beryllium Carbide (25) - XS lib may not exist
+m3    4009.83c   0.666667
+      6000.83c   0.333333 
+c 
+c - Carbon, Graphite (Reactor Grade) (63)
+m4    6000.83c   1.000000
+mt4   grph.64t
+c
+c - Helium, Natural (151)
+m5    2004.83c   1.000000
+c
+c - Silicon Carbide (Hexagonal) (282)
+m6    6000.83c   0.500000 
+     14000       0.500000
+c
